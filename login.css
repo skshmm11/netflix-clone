@@ -1,0 +1,455 @@
+/* ============================
+   GOOGLE FONT
+============================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ============================
+   RESET
+============================ */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    min-height:100vh;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    background:
+    linear-gradient(rgba(0,0,0,.75),
+    rgba(0,0,0,.85)),
+    url("../images/login-bg.jpg");
+
+    background-size:cover;
+    background-position:center;
+
+    color:white;
+
+    overflow:hidden;
+
+    position:relative;
+
+}
+
+/* ============================
+   DARK OVERLAY
+============================ */
+
+.overlay{
+
+    position:absolute;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,.35);
+
+    z-index:0;
+
+}
+
+/* ============================
+   LOGO
+============================ */
+
+header{
+
+    position:absolute;
+
+    top:30px;
+
+    left:60px;
+
+    z-index:20;
+
+}
+
+.logo{
+
+    color:#e50914;
+
+    font-size:38px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    text-decoration:none;
+
+}
+
+/* ============================
+   LOGIN CONTAINER
+============================ */
+
+.login-container{
+
+    position:relative;
+
+    z-index:5;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    padding:40px;
+
+}
+
+/* ============================
+   LOGIN BOX
+============================ */
+
+.login-box{
+
+    width:420px;
+
+    background:rgba(0,0,0,.82);
+
+    backdrop-filter:blur(14px);
+
+    padding:50px;
+
+    border-radius:12px;
+
+    box-shadow:0 0 40px rgba(0,0,0,.65);
+
+    animation:fadeIn .8s ease;
+
+}
+
+.login-box h1{
+
+    margin-bottom:35px;
+
+    font-size:36px;
+
+    font-weight:700;
+
+}
+
+/* ============================
+   INPUTS
+============================ */
+
+.input-box{
+
+    margin-bottom:22px;
+
+    position:relative;
+
+}
+
+.input-box input{
+
+    width:100%;
+
+    padding:16px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#333;
+
+    color:white;
+
+    font-size:16px;
+
+    transition:.3s;
+
+}
+
+.input-box input:focus{
+
+    background:#444;
+
+    outline:2px solid #e50914;
+
+}
+
+.input-box input::placeholder{
+
+    color:#bbb;
+
+}
+
+/* ============================
+   PASSWORD ICON
+============================ */
+
+.password-box i{
+
+    position:absolute;
+
+    right:18px;
+
+    top:50%;
+
+    transform:translateY(-50%);
+
+    cursor:pointer;
+
+    color:#bbb;
+
+    transition:.3s;
+
+}
+
+.password-box i:hover{
+
+    color:#fff;
+
+}
+
+/* ============================
+   SIGN IN BUTTON
+============================ */
+
+button{
+
+    width:100%;
+
+    padding:15px;
+
+    border:none;
+
+    border-radius:6px;
+
+    background:#e50914;
+
+    color:white;
+
+    font-size:17px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+    font-weight:600;
+
+}
+
+button:hover{
+
+    background:#b20710;
+
+}
+
+/* ============================
+   OPTIONS
+============================ */
+
+.options{
+
+    margin-top:18px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    font-size:14px;
+
+    color:#ccc;
+
+}
+
+.options label{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+}
+
+.options a{
+
+    color:#ccc;
+
+    text-decoration:none;
+
+}
+
+.options a:hover{
+
+    color:white;
+
+}
+
+/* ============================
+   SIGN UP
+============================ */
+
+.signup{
+
+    margin-top:35px;
+
+    color:#aaa;
+
+    font-size:15px;
+
+}
+
+.signup a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-weight:600;
+
+}
+
+.signup a:hover{
+
+    color:#e50914;
+
+}
+
+/* ============================
+   GUEST BUTTON
+============================ */
+
+.guest-login{
+
+    margin-top:28px;
+
+}
+
+.guest-login button{
+
+    background:transparent;
+
+    border:2px solid #777;
+
+}
+
+.guest-login button:hover{
+
+    border-color:#fff;
+
+    background:#222;
+
+}
+
+/* ============================
+   FADE ANIMATION
+============================ */
+
+@keyframes fadeIn{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(30px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+/* ============================
+   RESPONSIVE
+============================ */
+
+@media(max-width:900px){
+
+    header{
+
+        left:30px;
+
+    }
+
+    .login-box{
+
+        width:90%;
+
+        padding:40px;
+
+    }
+
+}
+
+@media(max-width:600px){
+
+    body{
+
+        background:#000;
+
+    }
+
+    .login-box{
+
+        width:100%;
+
+        height:100vh;
+
+        border-radius:0;
+
+        display:flex;
+
+        flex-direction:column;
+
+        justify-content:center;
+
+        padding:35px;
+
+    }
+
+    header{
+
+        left:20px;
+
+        top:20px;
+
+    }
+
+    .logo{
+
+        font-size:30px;
+
+    }
+
+    .login-box h1{
+
+        font-size:30px;
+
+    }
+
+    .options{
+
+        flex-direction:column;
+
+        gap:15px;
+
+        align-items:flex-start;
+
+    }
+
+}

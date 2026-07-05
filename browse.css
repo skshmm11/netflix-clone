@@ -1,0 +1,1273 @@
+/* ==========================================
+   GOOGLE FONT
+========================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================
+   RESET
+========================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:#141414;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+/* ==========================================
+   NAVBAR
+========================================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    padding:18px 60px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    background:linear-gradient(
+        to bottom,
+        rgba(0,0,0,.95),
+        rgba(0,0,0,.6),
+        transparent
+    );
+
+    z-index:1000;
+
+}
+
+.logo{
+
+    color:#e50914;
+
+    font-size:34px;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+    cursor:pointer;
+
+}
+
+/* ==========================================
+   NAV LINKS
+========================================== */
+
+nav ul{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:30px;
+
+}
+
+nav ul li a{
+
+    color:white;
+
+    text-decoration:none;
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+nav ul li a:hover{
+
+    color:#e50914;
+
+}
+
+/* ==========================================
+   RIGHT NAV
+========================================== */
+
+.right-nav{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:25px;
+
+}
+
+/* ==========================================
+   SEARCH
+========================================== */
+
+.search-box{
+
+    display:flex;
+
+    align-items:center;
+
+    background:#222;
+
+    padding:10px 15px;
+
+    border-radius:6px;
+
+    gap:10px;
+
+}
+
+.search-box input{
+
+    background:none;
+
+    border:none;
+
+    color:white;
+
+    outline:none;
+
+    width:180px;
+
+    font-size:15px;
+
+}
+
+.search-box input::placeholder{
+
+    color:#bbb;
+
+}
+
+.search-box i{
+
+    color:#ccc;
+
+}
+
+/* ==========================================
+   HERO
+========================================== */
+
+.hero{
+
+    height:90vh;
+
+    display:flex;
+
+    align-items:center;
+
+    padding:0 60px;
+
+    position:relative;
+
+    background:
+    linear-gradient(
+        rgba(0,0,0,.35),
+        rgba(0,0,0,.85)
+    ),
+    url("../images/hero.jpg");
+
+    background-size:cover;
+
+    background-position:center;
+
+}
+
+.hero-overlay{
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+        to right,
+        rgba(0,0,0,.8),
+        rgba(0,0,0,.2),
+        transparent
+    );
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    max-width:650px;
+
+    z-index:2;
+
+}
+
+.hero-content h1{
+
+    font-size:68px;
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+.hero-content p{
+
+    font-size:20px;
+
+    line-height:1.8;
+
+    margin-bottom:30px;
+
+    color:#ddd;
+
+}
+
+/* ==========================================
+   HERO BUTTONS
+========================================== */
+
+.buttons{
+
+    display:flex;
+
+    gap:15px;
+
+}
+
+.play-btn{
+
+    background:white;
+
+    color:black;
+
+    border:none;
+
+    padding:14px 32px;
+
+    border-radius:6px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.play-btn:hover{
+
+    background:#ddd;
+
+}
+
+.info-btn{
+
+    background:rgba(109,109,110,.7);
+
+    color:white;
+
+    border:none;
+
+    padding:14px 32px;
+
+    border-radius:6px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.info-btn:hover{
+
+    background:rgba(109,109,110,1);
+
+}
+
+/* ==========================================
+   GENERAL BUTTONS
+========================================== */
+
+button{
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* ==========================================
+   HERO FADE
+========================================== */
+
+.hero-content{
+
+    animation:heroFade .9s ease;
+
+}
+
+@keyframes heroFade{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}/* ==========================================
+   MOVIE CATEGORIES
+========================================== */
+
+.category{
+
+    padding:40px 60px;
+
+}
+
+.category h2{
+
+    font-size:28px;
+
+    margin-bottom:20px;
+
+    font-weight:600;
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   MOVIE ROW
+========================================== */
+
+.movie-row{
+
+    display:flex;
+
+    gap:18px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    scroll-behavior:smooth;
+
+    padding-bottom:15px;
+
+}
+
+.movie-row::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.movie-row::-webkit-scrollbar-track{
+
+    background:#111;
+
+    border-radius:20px;
+
+}
+
+.movie-row::-webkit-scrollbar-thumb{
+
+    background:#444;
+
+    border-radius:20px;
+
+}
+
+.movie-row::-webkit-scrollbar-thumb:hover{
+
+    background:#777;
+
+}
+
+/* ==========================================
+   MOVIE CARD
+========================================== */
+
+.movie-card{
+
+    min-width:220px;
+
+    position:relative;
+
+    cursor:pointer;
+
+    overflow:hidden;
+
+    border-radius:10px;
+
+    transition:.35s ease;
+
+    flex-shrink:0;
+
+    background:#181818;
+
+}
+
+.movie-card img{
+
+    width:100%;
+
+    height:320px;
+
+    object-fit:cover;
+
+    transition:.35s ease;
+
+}
+
+.movie-card h4{
+
+    position:absolute;
+
+    left:15px;
+
+    bottom:15px;
+
+    color:white;
+
+    opacity:0;
+
+    transition:.35s;
+
+    z-index:3;
+
+    text-shadow:0 0 10px black;
+
+}
+
+.movie-card:hover{
+
+    transform:scale(1.08);
+
+    z-index:10;
+
+    box-shadow:0 18px 40px rgba(0,0,0,.8);
+
+}
+
+.movie-card:hover img{
+
+    filter:brightness(.35);
+
+}
+
+.movie-card:hover h4{
+
+    opacity:1;
+
+}
+
+/* ==========================================
+   PLAY BUTTON
+========================================== */
+
+.movie-card::after{
+
+    content:"▶ Play";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:#e50914;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:5px;
+
+    opacity:0;
+
+    transition:.3s;
+
+    font-weight:600;
+
+    z-index:3;
+
+}
+
+.movie-card:hover::after{
+
+    opacity:1;
+
+}
+
+/* ==========================================
+   GRADIENT OVERLAY
+========================================== */
+
+.movie-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    inset:0;
+
+    background:linear-gradient(
+
+        transparent,
+
+        rgba(0,0,0,.2),
+
+        rgba(0,0,0,.9)
+
+    );
+
+    opacity:0;
+
+    transition:.35s;
+
+}
+
+.movie-card:hover::before{
+
+    opacity:1;
+
+}
+
+/* ==========================================
+   BUTTONS
+========================================== */
+
+.play-btn{
+
+    background:white;
+
+    color:black;
+
+    border:none;
+
+    padding:14px 32px;
+
+    border-radius:6px;
+
+    font-size:17px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.play-btn:hover{
+
+    background:#ddd;
+
+}
+
+.info-btn{
+
+    background:rgba(109,109,110,.7);
+
+    color:white;
+
+    border:none;
+
+    padding:14px 30px;
+
+    border-radius:6px;
+
+    margin-left:12px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+.info-btn:hover{
+
+    background:rgba(109,109,110,1);
+
+}
+
+/* ==========================================
+   PROFILE
+========================================== */
+
+.profile{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.profile i{
+
+    font-size:28px;
+
+    color:#fff;
+
+}
+
+.profile span{
+
+    font-size:15px;
+
+}
+
+#logoutBtn{
+
+    border:none;
+
+    background:#e50914;
+
+    color:white;
+
+    padding:10px 18px;
+
+    border-radius:5px;
+
+    cursor:pointer;
+
+    transition:.3s;
+
+}
+
+#logoutBtn:hover{
+
+    background:#b20710;
+
+}
+
+/* ==========================================
+   CATEGORY ANIMATION
+========================================== */
+
+.category{
+
+    animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(40px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}/* ==========================================
+   FOOTER
+========================================== */
+
+footer{
+
+    margin-top:60px;
+
+    padding:40px 60px;
+
+    background:#0b0b0b;
+
+    text-align:center;
+
+    color:#999;
+
+    font-size:15px;
+
+    border-top:1px solid #222;
+
+}
+
+footer p{
+
+    letter-spacing:1px;
+
+}
+
+/* ==========================================
+   HOVER EFFECTS
+========================================== */
+
+.movie-card{
+
+    will-change:transform;
+
+}
+
+.movie-card:hover{
+
+    transition:0.35s ease;
+
+}
+
+.movie-card:hover img{
+
+    transform:scale(1.08);
+
+}
+
+.movie-card img{
+
+    transition:0.35s ease;
+
+}
+
+/* ==========================================
+   SEARCH BOX EFFECT
+========================================== */
+
+.search-box{
+
+    transition:0.3s;
+
+}
+
+.search-box:hover{
+
+    background:#333;
+
+}
+
+.search-box input:focus{
+
+    width:220px;
+
+    transition:.3s;
+
+}
+
+/* ==========================================
+   LOGO ANIMATION
+========================================== */
+
+.logo{
+
+    transition:.3s;
+
+}
+
+.logo:hover{
+
+    transform:scale(1.08);
+
+    color:#ff1e28;
+
+}
+
+/* ==========================================
+   SCROLLBAR
+========================================== */
+
+::-webkit-scrollbar{
+
+    width:10px;
+
+    height:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+    background:#111;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#444;
+
+    border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#666;
+
+}
+
+/* ==========================================
+   TEXT SELECTION
+========================================== */
+
+::selection{
+
+    background:#e50914;
+
+    color:#fff;
+
+}
+
+/* ==========================================
+   RESPONSIVE - TABLETS
+========================================== */
+
+@media(max-width:1100px){
+
+.navbar{
+
+    padding:18px 30px;
+
+}
+
+.hero{
+
+    padding:0 30px;
+
+}
+
+.hero-content h1{
+
+    font-size:52px;
+
+}
+
+.hero-content p{
+
+    font-size:18px;
+
+}
+
+.category{
+
+    padding:35px 30px;
+
+}
+
+.movie-card{
+
+    min-width:190px;
+
+}
+
+.movie-card img{
+
+    height:280px;
+
+}
+
+}
+
+/* ==========================================
+   RESPONSIVE - SMALL TABLETS
+========================================== */
+
+@media(max-width:850px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:20px;
+
+}
+
+nav ul{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+    gap:15px;
+
+}
+
+.right-nav{
+
+    flex-direction:column;
+
+    gap:15px;
+
+}
+
+.hero{
+
+    text-align:center;
+
+    justify-content:center;
+
+}
+
+.hero-content{
+
+    max-width:90%;
+
+}
+
+.buttons{
+
+    justify-content:center;
+
+}
+
+}
+
+/* ==========================================
+   RESPONSIVE - MOBILE
+========================================== */
+
+@media(max-width:650px){
+
+.hero{
+
+    height:75vh;
+
+    padding:20px;
+
+}
+
+.hero-content h1{
+
+    font-size:36px;
+
+}
+
+.hero-content p{
+
+    font-size:16px;
+
+}
+
+.category{
+
+    padding:25px 20px;
+
+}
+
+.category h2{
+
+    font-size:22px;
+
+}
+
+.movie-card{
+
+    min-width:150px;
+
+}
+
+.movie-card img{
+
+    height:220px;
+
+}
+
+.search-box{
+
+    width:100%;
+
+}
+
+.search-box input{
+
+    width:100%;
+
+}
+
+.profile{
+
+    flex-direction:column;
+
+    gap:10px;
+
+}
+
+#logoutBtn{
+
+    width:100%;
+
+}
+
+footer{
+
+    padding:30px 20px;
+
+}
+
+}
+
+/* ==========================================
+   EXTRA SMALL DEVICES
+========================================== */
+
+@media(max-width:420px){
+
+.logo{
+
+    font-size:28px;
+
+}
+
+.hero-content h1{
+
+    font-size:30px;
+
+}
+
+.hero-content p{
+
+    font-size:15px;
+
+}
+
+.play-btn,
+.info-btn{
+
+    width:100%;
+
+    margin:5px 0;
+
+}
+
+.buttons{
+
+    flex-direction:column;
+
+}
+
+.movie-card{
+
+    min-width:135px;
+
+}
+
+.movie-card img{
+
+    height:200px;
+
+}
+
+}
+
+/* ==========================================
+   END OF FILE
+========================================== */
+/* ==========================================
+   ENHANCED RESPONSIVE DESIGN
+========================================== */
+
+/* Large Tablets */
+@media (max-width: 1024px){
+
+    .navbar{
+        padding:15px 25px;
+    }
+
+    .hero{
+        padding:0 25px;
+        height:80vh;
+    }
+
+    .hero-content h1{
+        font-size:48px;
+    }
+
+    .hero-content p{
+        font-size:18px;
+    }
+
+    .movie-card{
+        min-width:180px;
+    }
+
+    .movie-card img{
+        height:260px;
+    }
+
+}
+
+/* Tablets */
+@media (max-width:768px){
+
+    .navbar{
+        flex-direction:column;
+        gap:15px;
+        position:relative;
+        background:#111;
+    }
+
+    nav ul{
+        flex-wrap:wrap;
+        justify-content:center;
+        gap:15px;
+    }
+
+    .right-nav{
+        width:100%;
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .search-box{
+        width:100%;
+        max-width:400px;
+    }
+
+    .search-box input{
+        width:100%;
+    }
+
+    .hero{
+        height:70vh;
+        text-align:center;
+        justify-content:center;
+        padding:20px;
+    }
+
+    .hero-content{
+        max-width:100%;
+    }
+
+    .hero-content h1{
+        font-size:40px;
+    }
+
+    .buttons{
+        justify-content:center;
+        flex-wrap:wrap;
+    }
+
+    .category{
+        padding:30px 20px;
+    }
+
+}
+
+/* Phones */
+@media (max-width:576px){
+
+    .logo{
+        font-size:28px;
+    }
+
+    .hero{
+        height:65vh;
+    }
+
+    .hero-content h1{
+        font-size:32px;
+    }
+
+    .hero-content p{
+        font-size:15px;
+    }
+
+    .play-btn,
+    .info-btn{
+        width:100%;
+        margin:6px 0;
+    }
+
+    .buttons{
+        flex-direction:column;
+    }
+
+    .movie-card{
+        min-width:140px;
+    }
+
+    .movie-card img{
+        height:210px;
+    }
+
+    .profile{
+        flex-direction:column;
+        gap:10px;
+    }
+
+    #logoutBtn{
+        width:100%;
+    }
+
+    footer{
+        padding:25px 15px;
+    }
+
+}
+
+/* Small Phones */
+@media (max-width:380px){
+
+    .hero-content h1{
+        font-size:26px;
+    }
+
+    .hero-content p{
+        font-size:14px;
+    }
+
+    .movie-card{
+        min-width:120px;
+    }
+
+    .movie-card img{
+        height:180px;
+    }
+
+    .category h2{
+        font-size:20px;
+    }
+
+    nav ul{
+        gap:10px;
+    }
+
+    nav ul li a{
+        font-size:13px;
+    }
+
+}

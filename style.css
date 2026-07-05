@@ -1,0 +1,1106 @@
+/* ===========================
+   GOOGLE FONT
+=========================== */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ===========================
+   RESET
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#000;
+    color:#fff;
+    overflow-x:hidden;
+}
+
+a{
+    text-decoration:none;
+    color:white;
+}
+
+img{
+    width:100%;
+    display:block;
+}
+
+section{
+    padding:70px 8%;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+
+    position:fixed;
+
+    top:0;
+
+    left:0;
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:18px 8%;
+
+    background:linear-gradient(to bottom,
+    rgba(0,0,0,.9),
+    rgba(0,0,0,.2),
+    transparent);
+
+    z-index:1000;
+
+}
+
+.logo span{
+
+    font-size:34px;
+
+    color:#e50914;
+
+    font-weight:800;
+
+    letter-spacing:2px;
+
+}
+
+.nav-links{
+
+    display:flex;
+
+    list-style:none;
+
+    gap:28px;
+
+}
+
+.nav-links li a{
+
+    font-size:15px;
+
+    transition:.3s;
+
+}
+
+.nav-links li a:hover{
+
+    color:#e50914;
+
+}
+
+.nav-right{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:20px;
+
+}
+
+.nav-right i{
+
+    font-size:18px;
+
+    cursor:pointer;
+
+}
+
+.signin-btn{
+
+    background:#e50914;
+
+    padding:10px 20px;
+
+    border-radius:5px;
+
+    transition:.3s;
+
+    font-weight:500;
+
+}
+
+.signin-btn:hover{
+
+    background:#b20710;
+
+}
+
+/* ===========================
+   HERO
+=========================== */
+
+.hero{
+
+    position:relative;
+
+    height:100vh;
+
+    background:url("../images/hero.jpg")
+    center center/cover no-repeat;
+
+    display:flex;
+
+    align-items:center;
+
+}
+
+.overlay{
+
+    position:absolute;
+
+    width:100%;
+
+    height:100%;
+
+    background:
+    linear-gradient(
+    to right,
+    rgba(0,0,0,.9),
+    rgba(0,0,0,.5),
+    rgba(0,0,0,.1));
+
+}
+
+.hero-content{
+
+    position:relative;
+
+    z-index:2;
+
+    max-width:700px;
+
+}
+
+.hero h1{
+
+    font-size:64px;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+.hero p{
+
+    font-size:22px;
+
+    margin-bottom:20px;
+
+}
+
+.hero .small{
+
+    font-size:18px;
+
+    color:#d5d5d5;
+
+}
+
+.email-box{
+
+    display:flex;
+
+    margin-top:25px;
+
+    max-width:700px;
+
+}
+
+.email-box input{
+
+    flex:1;
+
+    padding:18px;
+
+    border:none;
+
+    outline:none;
+
+    font-size:18px;
+
+    border-radius:5px 0 0 5px;
+
+}
+
+.email-box button{
+
+    background:#e50914;
+
+    color:white;
+
+    border:none;
+
+    padding:18px 30px;
+
+    cursor:pointer;
+
+    font-size:20px;
+
+    border-radius:0 5px 5px 0;
+
+    transition:.3s;
+
+}
+
+.email-box button:hover{
+
+    background:#b20710;
+
+}
+
+.email-box i{
+
+    margin-left:10px;
+}
+
+/* ===========================
+   SECTION TITLE
+=========================== */
+
+section h2{
+
+    font-size:42px;
+
+    margin-bottom:25px;
+
+    font-weight:700;
+
+}
+
+/* ===========================
+   DIVIDER
+=========================== */
+
+.feature,
+.movies,
+.faq{
+
+    border-top:8px solid #222;
+
+}/* =====================================
+   FEATURE SECTIONS
+===================================== */
+
+.feature{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    gap:60px;
+
+    flex-wrap:wrap;
+
+    padding:90px 8%;
+
+}
+
+.feature.reverse{
+
+    flex-direction:row-reverse;
+
+}
+
+.feature-text{
+
+    flex:1;
+
+    min-width:320px;
+
+}
+
+.feature-text h2{
+
+    font-size:50px;
+
+    margin-bottom:20px;
+
+    font-weight:700;
+
+}
+
+.feature-text p{
+
+    font-size:22px;
+
+    line-height:1.8;
+
+    color:#d5d5d5;
+
+}
+
+.feature-image{
+
+    flex:1;
+
+    min-width:320px;
+
+    text-align:center;
+
+}
+
+.feature-image img{
+
+    width:100%;
+
+    max-width:520px;
+
+    transition:0.5s ease;
+
+    filter:drop-shadow(0 0 25px rgba(229,9,20,.25));
+
+}
+
+.feature-image img:hover{
+
+    transform:scale(1.05);
+
+}
+
+/* =====================================
+   MOVIES SECTION
+===================================== */
+
+.movies{
+
+    padding:70px 8%;
+
+}
+
+.movies h2{
+
+    font-size:42px;
+
+    margin-bottom:35px;
+
+}
+
+.movie-row{
+
+    display:flex;
+
+    gap:20px;
+
+    overflow-x:auto;
+
+    overflow-y:hidden;
+
+    padding-bottom:15px;
+
+    scroll-behavior:smooth;
+
+}
+
+.movie-row::-webkit-scrollbar{
+
+    height:8px;
+
+}
+
+.movie-row::-webkit-scrollbar-track{
+
+    background:#111;
+
+    border-radius:20px;
+
+}
+
+.movie-row::-webkit-scrollbar-thumb{
+
+    background:#444;
+
+    border-radius:20px;
+
+}
+
+.movie-row::-webkit-scrollbar-thumb:hover{
+
+    background:#777;
+
+}
+
+/* =====================================
+   MOVIE CARD
+===================================== */
+
+.movie-card{
+
+    min-width:230px;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+    position:relative;
+
+    border-radius:8px;
+
+    overflow:hidden;
+
+    flex-shrink:0;
+
+    background:#111;
+
+}
+
+.movie-card img{
+
+    width:100%;
+
+    height:330px;
+
+    object-fit:cover;
+
+    transition:.35s ease;
+
+}
+
+.movie-card:hover{
+
+    transform:scale(1.08);
+
+    z-index:20;
+
+    box-shadow:0 15px 35px rgba(0,0,0,.8);
+
+}
+
+.movie-card:hover img{
+
+    filter:brightness(.45);
+
+}
+
+/* =====================================
+   MOVIE INFO OVERLAY
+===================================== */
+
+.movie-card::after{
+
+    content:"▶ Watch Now";
+
+    position:absolute;
+
+    left:50%;
+
+    top:50%;
+
+    transform:translate(-50%,-50%);
+
+    background:#e50914;
+
+    color:#fff;
+
+    padding:10px 18px;
+
+    border-radius:5px;
+
+    font-size:15px;
+
+    opacity:0;
+
+    transition:.35s;
+
+    font-weight:600;
+
+}
+
+.movie-card:hover::after{
+
+    opacity:1;
+
+}
+
+/* =====================================
+   CARD TITLE
+===================================== */
+
+.movie-card h4{
+
+    position:absolute;
+
+    bottom:18px;
+
+    left:15px;
+
+    right:15px;
+
+    color:#fff;
+
+    font-size:18px;
+
+    font-weight:600;
+
+    opacity:0;
+
+    transition:.35s;
+
+    text-shadow:0 0 10px #000;
+
+}
+
+.movie-card:hover h4{
+
+    opacity:1;
+
+}
+
+/* =====================================
+   BUTTON STYLES
+===================================== */
+
+button{
+
+    font-family:'Poppins',sans-serif;
+
+}
+
+.primary-btn{
+
+    display:inline-block;
+
+    background:#e50914;
+
+    color:#fff;
+
+    padding:14px 28px;
+
+    border-radius:5px;
+
+    transition:.3s;
+
+}
+
+.primary-btn:hover{
+
+    background:#b20710;
+
+}
+
+.secondary-btn{
+
+    display:inline-block;
+
+    background:#333;
+
+    color:#fff;
+
+    padding:14px 28px;
+
+    border-radius:5px;
+
+    transition:.3s;
+
+}
+
+.secondary-btn:hover{
+
+    background:#555;
+
+}
+
+/* =====================================
+   SMOOTH FADE ANIMATION
+===================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(50px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.hero-content{
+
+    animation:fadeUp .9s ease;
+
+}
+
+.feature{
+
+    animation:fadeUp .8s ease;
+
+}
+
+.movies{
+
+    animation:fadeUp .8s ease;
+
+}/* =====================================
+   FAQ SECTION
+===================================== */
+
+.faq{
+
+    padding:90px 8%;
+
+}
+
+.faq h2{
+
+    text-align:center;
+
+    margin-bottom:45px;
+
+    font-size:46px;
+
+}
+
+.faq-item{
+
+    max-width:900px;
+
+    margin:20px auto;
+
+}
+
+.faq-question{
+
+    width:100%;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:22px 25px;
+
+    background:#303030;
+
+    color:#fff;
+
+    border:none;
+
+    cursor:pointer;
+
+    font-size:22px;
+
+    transition:.3s;
+
+}
+
+.faq-question:hover{
+
+    background:#444;
+
+}
+
+.faq-question i{
+
+    font-size:24px;
+
+}
+
+.faq-answer{
+
+    display:none;
+
+    background:#222;
+
+    color:#ddd;
+
+    padding:20px 25px;
+
+    line-height:1.8;
+
+    font-size:18px;
+
+}
+
+.faq-item.active .faq-answer{
+
+    display:block;
+
+}
+
+.faq-item.active .faq-question i{
+
+    transform:rotate(45deg);
+
+    transition:.3s;
+
+}
+
+/* =====================================
+   FOOTER
+===================================== */
+
+footer{
+
+    border-top:8px solid #222;
+
+    padding:60px 8% 30px;
+
+    color:#999;
+
+    background:#000;
+
+}
+
+.footer-container{
+
+    display:grid;
+
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+
+    gap:35px;
+
+}
+
+.footer-container h3{
+
+    color:#fff;
+
+    margin-bottom:18px;
+
+    font-size:20px;
+
+}
+
+.footer-container a{
+
+    display:block;
+
+    margin:10px 0;
+
+    color:#999;
+
+    transition:.3s;
+
+}
+
+.footer-container a:hover{
+
+    color:#fff;
+
+    transform:translateX(6px);
+
+}
+
+.footer-container i{
+
+    margin-right:8px;
+
+}
+
+footer .copyright{
+
+    margin-top:40px;
+
+    text-align:center;
+
+    color:#777;
+
+    font-size:15px;
+
+}
+
+/* =====================================
+   UTILITIES
+===================================== */
+
+html{
+
+    scroll-behavior:smooth;
+
+}
+
+::selection{
+
+    background:#e50914;
+
+    color:#fff;
+
+}
+
+input:focus{
+
+    outline:2px solid #e50914;
+
+}
+
+button{
+
+    transition:.3s;
+
+}
+
+button:hover{
+
+    transform:translateY(-2px);
+
+}
+
+/* =====================================
+   RESPONSIVE DESIGN
+===================================== */
+
+@media(max-width:1100px){
+
+.hero h1{
+
+    font-size:52px;
+
+}
+
+.feature{
+
+    flex-direction:column;
+
+    text-align:center;
+
+}
+
+.feature.reverse{
+
+    flex-direction:column;
+
+}
+
+.feature-text h2{
+
+    font-size:40px;
+
+}
+
+.feature-text p{
+
+    font-size:20px;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.navbar{
+
+    flex-direction:column;
+
+    gap:18px;
+
+}
+
+.nav-links{
+
+    flex-wrap:wrap;
+
+    justify-content:center;
+
+}
+
+.hero{
+
+    text-align:center;
+
+    justify-content:center;
+
+}
+
+.hero-content{
+
+    max-width:90%;
+
+}
+
+.email-box{
+
+    flex-direction:column;
+
+}
+
+.email-box input{
+
+    border-radius:6px;
+
+    margin-bottom:12px;
+
+}
+
+.email-box button{
+
+    border-radius:6px;
+
+}
+
+.hero h1{
+
+    font-size:44px;
+
+}
+
+.hero p{
+
+    font-size:18px;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.logo span{
+
+    font-size:28px;
+
+}
+
+.nav-links{
+
+    gap:14px;
+
+}
+
+.nav-links a{
+
+    font-size:14px;
+
+}
+
+.hero{
+
+    height:90vh;
+
+}
+
+.hero h1{
+
+    font-size:34px;
+
+}
+
+.hero .small{
+
+    font-size:16px;
+
+}
+
+section{
+
+    padding:60px 6%;
+
+}
+
+.movies h2,
+.feature h2,
+.faq h2{
+
+    font-size:32px;
+
+}
+
+.movie-card{
+
+    min-width:170px;
+
+}
+
+.movie-card img{
+
+    height:250px;
+
+}
+
+.faq-question{
+
+    font-size:18px;
+
+    padding:18px;
+
+}
+
+.faq-answer{
+
+    font-size:16px;
+
+}
+
+}
+
+@media(max-width:450px){
+
+.hero h1{
+
+    font-size:28px;
+
+}
+
+.hero p{
+
+    font-size:16px;
+
+}
+
+.email-box input{
+
+    font-size:16px;
+
+    padding:15px;
+
+}
+
+.email-box button{
+
+    font-size:17px;
+
+    padding:15px;
+
+}
+
+.movie-card{
+
+    min-width:150px;
+
+}
+
+.movie-card img{
+
+    height:220px;
+
+}
+
+.footer-container{
+
+    text-align:center;
+
+}
+
+}
+
+/* =====================================
+   END OF FILE
+===================================== */

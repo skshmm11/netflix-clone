@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StreamFlix | Browse</title>
+
+    <link rel="stylesheet" href="browse.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<!-- ================= NAVBAR ================= -->
+
+<header class="navbar">
+
+    <div class="logo">
+        STREAMFLIX
+    </div>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="#">Home</a></li>
+            <li><a href="#">TV Shows</a></li>
+            <li><a href="#">Movies</a></li>
+            <li><a href="#">New & Popular</a></li>
+            <li><a href="#">My List</a></li>
+
+        </ul>
+
+    </nav>
+
+    <div class="right-nav">
+
+        <div class="search-box">
+
+            <i class="fa-solid fa-search"></i>
+
+            <input
+                type="text"
+                id="search"
+                placeholder="Search movies...">
+
+        </div>
+
+        <div class="profile">
+
+            <i class="fa-solid fa-user-circle"></i>
+
+            <span id="username"></span>
+
+            <button id="logoutBtn">
+                Logout
+            </button>
+
+        </div>
+
+    </div>
+
+</header>
+
+<!-- ================= HERO ================= -->
+
+<section class="hero">
+
+    <div class="hero-overlay"></div>
+
+    <div class="hero-content">
+
+        <h1>THE LAST KINGDOM</h1>
+
+        <p>
+
+            A fearless warrior rises to reclaim his destiny in a world filled
+            with betrayal, kingdoms, and epic battles.
+
+        </p>
+
+        <div class="buttons">
+
+            <button class="play-btn">
+
+                <i class="fa-solid fa-play"></i>
+
+                Play
+
+            </button>
+
+            <button class="info-btn">
+
+                <i class="fa-solid fa-circle-info"></i>
+
+                More Info
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<!-- ================= MOVIE ROW ================= -->
+
+<section class="category">
+
+    <h2>Trending Now</h2>
+
+    <div class="movie-row">
+
+        <div class="movie-card">
+            <img src="images/posters/movie1.jpg">
+            <h4>Night Hunter</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie2.jpg">
+            <h4>Lost Planet</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie3.jpg">
+            <h4>Galaxy War</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie4.jpg">
+            <h4>Dark City</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie5.jpg">
+            <h4>The Escape</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie6.jpg">
+            <h4>Invisible</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="category">
+
+    <h2>Action Movies</h2>
+
+    <div class="movie-row">
+
+        <div class="movie-card">
+            <img src="images/posters/movie7.jpg">
+            <h4>Iron Blade</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie8.jpg">
+            <h4>Last Mission</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie9.jpg">
+            <h4>Storm Force</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie10.jpg">
+            <h4>Red Shadow</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie11.jpg">
+            <h4>Dead Horizon</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie12.jpg">
+            <h4>Vortex</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<section class="category">
+
+    <h2>Comedy</h2>
+
+    <div class="movie-row">
+
+        <div class="movie-card">
+            <img src="images/posters/movie13.jpg">
+            <h4>Laugh Out Loud</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie14.jpg">
+            <h4>Weekend Trouble</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie15.jpg">
+            <h4>Office Chaos</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie16.jpg">
+            <h4>Crazy Family</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie17.jpg">
+            <h4>Oops!</h4>
+        </div>
+
+        <div class="movie-card">
+            <img src="images/posters/movie18.jpg">
+            <h4>Vacation Gone Wrong</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+
+        © 2026 StreamFlix
+
+    </p>
+
+</footer>
+
+<script>
+
+if(localStorage.getItem("loggedIn")==null){
+
+    window.location.href="login.html";
+
+}
+
+const user=localStorage.getItem("userEmail");
+
+document.getElementById("username").textContent=
+user ? user : "Guest";
+
+document.getElementById("logoutBtn").onclick=function(){
+
+    localStorage.removeItem("loggedIn");
+    localStorage.removeItem("userEmail");
+
+    window.location.href="login.html";
+
+}
+
+const search=document.getElementById("search");
+
+search.addEventListener("keyup",function(){
+
+    const filter=this.value.toLowerCase();
+
+    const cards=document.querySelectorAll(".movie-card");
+
+    cards.forEach(card=>{
+
+        const title=card.querySelector("h4").textContent.toLowerCase();
+
+        if(title.includes(filter)){
+
+            card.style.display="block";
+
+        }
+        else{
+
+            card.style.display="none";
+
+        }
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>

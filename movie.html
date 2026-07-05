@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>StreamFlix | Movie Details</title>
+
+    <link rel="stylesheet" href="movie.css">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">
+        STREAMFLIX
+    </div>
+
+    <nav>
+
+        <a href="browse.html">
+            <i class="fas fa-arrow-left"></i>
+            Back
+        </a>
+
+    </nav>
+
+</header>
+
+<section class="banner">
+
+    <div class="overlay"></div>
+
+    <div class="banner-content">
+
+        <h1 id="movieTitle">
+            The Last Kingdom
+        </h1>
+
+        <div class="details">
+
+            <span>2025</span>
+
+            <span>•</span>
+
+            <span>Action</span>
+
+            <span>•</span>
+
+            <span>2h 18m</span>
+
+            <span>•</span>
+
+            <span>⭐ 8.8 / 10</span>
+
+        </div>
+
+        <p id="description">
+
+            A fearless warrior fights to reclaim his homeland after years
+            of exile while dark forces threaten the kingdom.
+
+        </p>
+
+        <div class="buttons">
+
+            <button class="play">
+
+                <i class="fas fa-play"></i>
+
+                Play
+
+            </button>
+
+            <button class="list">
+
+                <i class="fas fa-plus"></i>
+
+                My List
+
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="cast">
+
+    <h2>Cast</h2>
+
+    <div class="cast-row">
+
+        <div class="actor">
+
+            <img src="images/cast/actor1.jpg">
+
+            <p>James Carter</p>
+
+        </div>
+
+        <div class="actor">
+
+            <img src="images/cast/actor2.jpg">
+
+            <p>Emma Stonefield</p>
+
+        </div>
+
+        <div class="actor">
+
+            <img src="images/cast/actor3.jpg">
+
+            <p>Daniel Ross</p>
+
+        </div>
+
+        <div class="actor">
+
+            <img src="images/cast/actor4.jpg">
+
+            <p>Olivia Green</p>
+
+        </div>
+
+    </div>
+
+</section>
+
+<section class="recommended">
+
+    <h2>You May Also Like</h2>
+
+    <div class="movie-row">
+
+        <div class="movie">
+            <img src="images/posters/movie5.jpg">
+            <h4>The Escape</h4>
+        </div>
+
+        <div class="movie">
+            <img src="images/posters/movie7.jpg">
+            <h4>Iron Blade</h4>
+        </div>
+
+        <div class="movie">
+            <img src="images/posters/movie9.jpg">
+            <h4>Storm Force</h4>
+        </div>
+
+        <div class="movie">
+            <img src="images/posters/movie12.jpg">
+            <h4>Vortex</h4>
+        </div>
+
+        <div class="movie">
+            <img src="images/posters/movie16.jpg">
+            <h4>Crazy Family</h4>
+        </div>
+
+    </div>
+
+</section>
+
+<footer>
+
+    <p>
+        © 2026 StreamFlix | Educational Project
+    </p>
+
+</footer>
+
+<script>
+
+if(localStorage.getItem("loggedIn")==null){
+
+    window.location.href="login.html";
+
+}
+
+document.querySelector(".play").onclick=function(){
+
+    alert("Playing trailer...");
+
+}
+
+document.querySelector(".list").onclick=function(){
+
+    alert("Added to My List!");
+
+}
+
+</script>
+
+</body>
+</html>
